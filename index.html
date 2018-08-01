@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake Rest Api </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"> 
+</head>
+<body>
+    <div class ="container">
+    <h1> Feed Me ! </h1> 
+    
+
+    <div class="row">
+    
+        <div class ="col s6">
+            <form class ="row" >
+                <div class="input-field col s6">
+                    <input placeholder="First Name" id="firstName" type="text" class="validate">
+                 </div>
+                <div class="input-field col s6">
+                    <input placeholder="Last Name" id="lastName" type="text" class="validate">
+                </div>
+
+                <div class="input-field col s6">
+                    <input placeholder="Email" id="mail" type="text" class="validate">
+                                     </div>
+                <div class="input-field col s12">
+                    <textarea id="description" class="materialize-textarea" placeholder ="Description"></textarea>
+                </div>
+
+
+                <div class="col s2"> 
+                <button class ="waves-effect waves-light btn" id="btnsb"> FeedMe&rarr;</button>
+                </div>
+            </form> 
+
+        </div>
+
+        <div class ="col s6">
+            <h2> API  </h2> 
+            
+            <div id="api">
+
+            </div>
+
+        </div> 
+    
+
+        </div> 
+    </div>
+    <footer class="page-footer blue-grey darken-1">
+    <div class="container">
+        &copy 2018 Copyright Text
+       <a class="grey-text right" href="#!">More Links</a>
+          </div>
+    </footer>
+    <script src ="main.js"></script> 
+
+</body>
+</html>

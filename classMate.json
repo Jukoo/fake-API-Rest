@@ -1,0 +1,23 @@
+{
+    
+    
+       "mates" : [
+            {
+            "Id_mate" : 1 ,
+            "firstName" : "jukoo",
+            "lastName":"Doe",
+            "email" : "funscript@outlook.fr",
+            "langs" :["JavaScript" ,"Python" , "ScriptShell" , "PHP"],
+            "Description": "Hi! my name is jukoo im a trusted Advisor my passion is to write script an automate task"
+            },
+            {
+            "Id_mate" : 2 ,
+            "firstName" : "Nafissatou",
+            "lastName":"unknow",
+            "email" : "Nafi@Gmail.fr",
+            "langs" :["FullStack Devlopper"],
+            "Description": "My Nafissatou im a FullStacK dev"
+            }
+       ]
+    
+}
