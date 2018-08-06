@@ -1,8 +1,6 @@
 /* this file is used to express the different Http requests passing through 
  * - XHR (with the promise) 
- * - and the Fecth  API
- *   NameSpace Name : nexus 
- */ 
+ */
 
 let {
       
@@ -16,6 +14,7 @@ let {
     
     ,SelectElm 
 
+
     } = require("./module")  
 
 
@@ -28,16 +27,17 @@ const Nexus ={
         
         PromiseXhr("http://localhost:3000/mates")
             .then(data => {
-            
-                let source  = JSON.parse(data) 
                 
-                for (let x in source){
-              
-                    SelectElm("#api").innerHTML += Template(source[x])
+                 let source  = JSON.parse(data) 
+
+                for (let item in source ) {
+
+                      
+                    SelectElm("#api").innerHTML += Template(source[item])
                 
-                }  
-                                    
-            }).catch(err => console.warn(err))
+                }
+                
+        }).catch(err => console.warn(err))
     } , 
 
 
@@ -51,10 +51,7 @@ const Nexus ={
             SelectElm("#description") 
         
         ]
-
-        ArrayElm.forEach(i => console.log(i))
-
-        let increment = 2  ; 
+ 
 
         document.querySelector("form").addEventListener("submit" , evt => {
              
@@ -91,8 +88,3 @@ const Nexus ={
 
 
 Loader(Nexus) 
-
-
-//#fix bugs 
-//make post request to classmate.json 
-//

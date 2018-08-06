@@ -57,14 +57,20 @@ module.exports  =  {
         
         if (typeof args == "object") {
         
-               
-            return `<strong>${args.firstName}</strong> 
-                    <mark>${args.lastName}</mark>
-                    <small>${args.email}</small>
-                    <p>${args.Description}</p> 
+               let {
+                   firstName , 
+                   lastName ,
+                   email ,
+                   Description
+                   } = args
+
+            return `<strong>${firstName}</strong> 
+                    <mark>${lastName}</mark>
+                    <small>${email}</small>
+                    <p>${Description}</p> 
                     <hr> 
                   `
-         }
+         }else deb(typeof args)
     } , 
 
     Loader (NameSpace) {
@@ -81,15 +87,16 @@ module.exports  =  {
 
     SelectElm (indicator) {
             
-        let regex = /^.\w|^\w/
+        let pattern = /^.\w|^\w/
 
         const BeginChar = new Set(["." , "#"]) 
 
-        if (indicator.match(regex) && BeginChar.has(indicator.charAt(0))){
+        if (indicator.match(pattern) && BeginChar.has(indicator.charAt(0))){
             
             return document.querySelector(indicator)
+
         }else throw new error() 
         
-    } 
-}
+    }
 
+}
